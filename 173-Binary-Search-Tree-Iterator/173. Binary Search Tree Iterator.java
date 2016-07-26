@@ -10,13 +10,12 @@
 
 public class BSTIterator {
 
-    Stack<TreeNode> stack;
-	
-	// 构造函数
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    
     public BSTIterator(TreeNode root) 
     {
-        stack = new Stack<TreeNode>();
-        // 先找到第一个节点，并把路径入栈
+        // 初始化，一直把左节点压人栈
+        // 栈顶即为下一个最小节点
         while(root != null)
         {
             stack.push(root);
@@ -26,28 +25,27 @@ public class BSTIterator {
 
     /** @return whether we have a next smallest number */
     public boolean hasNext() 
-    {        
-        // 栈为空时不再有下一个
-        return !stack.isEmpty();
+    {
+        return !stack.isEmpty();    
     }
 
     /** @return the next smallest number */
     public int next() 
     {
-        // 栈顶是待返回元素
-        TreeNode curr = stack.pop();
-        int res = curr.val;
-        // 如果该元素有右节点，把它的右节点及右节点的所有左边节点都压入栈中
-        if(curr.right != null)
+        // 栈顶即为下一个最小节点
+        TreeNode node = stack.pop();
+        int result = node.val;
+        // 如果有右节点，就一直把其左节点压人栈
+        if(node.right != null)
         {
-            curr = curr.right;
-            while(curr != null)
+            node = node.right;
+            while(node != null)
             {
-                stack.push(curr);
-                curr = curr.left;
+                stack.push(node);
+                node = node.left;
             }
         }
-        return res;
+        return result;
     }
 }
 
