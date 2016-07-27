@@ -12,11 +12,11 @@ public class Solution {
         {
             // 第一行就是最后一行，则直接输出这行
             if(i == m - 1 - i)
-                for(int j = i; j < n - 1 - i; j++)
+                for(int j = i; j < n - i; j++)
                     result.add(matrix[i][j]);
             // 第一列就是最后一列，则直接输出这列
             else if(i == n - 1 - i)
-                for(int j = i; j < m - 1 - i; j++)
+                for(int j = i; j < m - i; j++)
                     result.add(matrix[j][i]);
             else
             {
