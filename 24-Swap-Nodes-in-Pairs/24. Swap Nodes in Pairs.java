@@ -7,14 +7,13 @@
  * }
  */
 public class Solution {
+    // 我的算法
     public ListNode swapPairs(ListNode head) 
     {
         if(head == null || head.next == null)
             return head;
         ListNode dummy = new ListNode(-1);
         ListNode preNode = dummy;
-        // 头节点将是第二个节点
-        dummy.next = head.next;
         // 交换
         while(head != null && head.next != null)
         {
