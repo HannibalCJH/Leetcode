@@ -7,8 +7,7 @@
  * }
  */
 public class Solution {
-    
-    
+    // 我的算法
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) 
     {
         ListNode dummy = new ListNode(-1);
@@ -27,12 +26,14 @@ public class Solution {
             }
             preNode = preNode.next;
         }
+        
         if(l1 != null)
         {
             preNode.next = l1;
             l1 = l1.next;
             preNode = preNode.next;
         }
+        
         if(l2 != null)
         {
             preNode.next = l2;
