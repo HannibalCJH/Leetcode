@@ -12,10 +12,13 @@ public class Solution {
             String temp = expandFromCenter(s, i, i);
             if(temp.length() > result.length())
                 result = temp;
-            // 以两个字符为中心
-            temp = expandFromCenter(s, i, i + 1);
-            if(temp.length() > result.length())
-                result = temp;
+            // 在中心的两个字符相等的情况下，以这两个字符为中心，
+            if(s.charAt(i) == s.charAt(i + 1))
+            {
+                temp = expandFromCenter(s, i, i + 1);
+                if(temp.length() > result.length())
+                    result = temp;
+            }
         }
         return result;
     }
