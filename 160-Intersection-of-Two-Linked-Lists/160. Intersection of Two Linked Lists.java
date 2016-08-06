@@ -10,8 +10,10 @@
  * }
  */
 public class Solution {
+    // 我的算法
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) 
     {
+        // 计算每个链表长度
         int lenA = getLength(headA), lenB = getLength(headB);
         if(lenA > lenB)
         {
@@ -25,7 +27,7 @@ public class Solution {
             for(int i = dist; i > 0; i--)
                 headB = headB.next;
         }
-        
+        // 如果没有重合那跳出循环时两个头指针都指向空
         while(headA != null && headA != headB)
         {
             headA = headA.next;
