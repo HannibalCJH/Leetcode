@@ -1,6 +1,29 @@
 public class Solution {
+    
+    public void rotate(int[] nums, int k)
+    {
+        int length = nums.length;
+        int step = k % length;
+        reverse(nums, 0, length - 1);
+        reverse(nums, 0, step);
+        reverse(nums, step + 1, length - 1);
+    }
+    
+    private void reverse(int[] nums, int i, int j)
+    {
+        while(i < j)
+        {
+            // 交换两个数
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    
     // 我的算法
-    public void rotate(int[] nums, int k) 
+    public void rotate2(int[] nums, int k) 
     {
         if(nums.length == 0)
             return;
