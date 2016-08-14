@@ -38,7 +38,7 @@ In this case, no transaction is done, i.e. max profit = 0.
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton">[Array](/tag/array/) [Dynamic Programming](/tag/dynamic-programming/)</span></div>
+<span class="hidebutton" style="display: none;">[Array](/tag/array/) [Dynamic Programming](/tag/dynamic-programming/)</span></div>
 
 <div>
 
