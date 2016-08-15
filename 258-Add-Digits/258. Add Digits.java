@@ -1,4 +1,5 @@
 public class Solution {
+    // 我的算法
 	public int addDigits(int num) 
 	{
         while(num > 9)
