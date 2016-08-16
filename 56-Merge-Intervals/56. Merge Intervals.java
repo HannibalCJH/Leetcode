@@ -10,7 +10,7 @@
 public class Solution {
     public List<Interval> merge(List<Interval> intervals) 
     {
-		int size = intervals.size();  
+	int size = intervals.size();  
         List<Interval> result = new ArrayList<Interval>();  
         if(size < 1)  
             return result;
