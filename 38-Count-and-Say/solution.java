@@ -1,34 +1,34 @@
 public class Solution {
     public String countAndSay(int n) 
     {
-        // current is the string for next iteration to count
+        // 下一次迭代时用的字符串
         String current = "1";  
-        // str is for building new string in terms of current
+        // 根据current来生成对应的字符串
         StringBuilder str = new StringBuilder("1");  
-        // index of nth sequence
-        for(int i=1;i<n;i++)
+        // 迭代n次
+        for(int i = 1; i < n; i++)
         {  
-        	// reset str as empty string
+        	// 重置str为空字符串
         	str = new StringBuilder("");  
             int length = current.length();  
-            // initialze count
-            int count = 1;  
-            for(int j=0;j<length;j++)
-            {  
-            	// while current char equals to next char and the index is within length,
-            	// increase count and move to next index
+            
+            for(int j = 0; j < length; j++)
+            {
+                // 初始化计数器
+                int count = 1;  
+            	// 当前的字符等于下一个字符且没有超出字符串的长度
                 while(j + 1 < length && current.charAt(j) == current.charAt(j+1))
-                {  
+                {
+                    // 下一个字符
                     j++;  
+                    // 计数器加1
                     count++;  
                 }  
-                // while current char differs from next char, so the count of current char is over,
-                // append count and char then reset count to 1 for counting another char
+                // 当前字符不等于下一个字符则说明当前字符的计数已经完成，把计数和字符拼接到str并重置计数器
                 str.append(count);  
                 str.append(current.charAt(j));  
-                count = 1;  
             }  
-            // store str in current for counting in next iteration 
+            // 设current为str，作为下次迭代时要用的字符串
             current = str.toString();  
         }  
         return str.toString();  
