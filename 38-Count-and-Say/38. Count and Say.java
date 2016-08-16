@@ -11,12 +11,13 @@ public class Solution {
         	// 重置str为空字符串
         	str = new StringBuilder("");  
             int length = current.length();  
-            // 初始化计数器
-            int count = 1;  
+            
             for(int j = 0; j < length; j++)
             {
+                // 初始化计数器
+                int count = 1;  
             	// 当前的字符等于下一个字符且没有超出字符串的长度
-                while(j + 1 < length && current.charAt(j) == current.charAt(j+1))
+                while(j + 1 < length && current.charAt(j) == current.charAt(j + 1))
                 {
                     // 下一个字符
                     j++;  
@@ -26,7 +27,6 @@ public class Solution {
                 // 当前字符不等于下一个字符则说明当前字符的计数已经完成，把计数和字符拼接到str并重置计数器
                 str.append(count);  
                 str.append(current.charAt(j));  
-                count = 1;  
             }  
             // 设current为str，作为下次迭代时要用的字符串
             current = str.toString();  
