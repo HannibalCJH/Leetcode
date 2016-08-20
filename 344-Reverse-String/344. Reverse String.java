@@ -1,9 +1,17 @@
 public class Solution {
     public String reverseString(String s) 
     {
-        StringBuilder sb = new StringBuilder();
-        for(int i = s.length() - 1; i >= 0; i--)
-            sb.append(s.charAt(i));
+        StringBuilder sb = new StringBuilder(s);
+        
+        int left = 0, right = s.length() - 1;
+        while(left < right)
+        {
+            char ch = s.charAt(left);
+            sb.setCharAt(left, s.charAt(right));
+            sb.setCharAt(right, ch);
+            left++;
+            right--;
+        }
         return sb.toString();
     }
 }
