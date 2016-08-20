@@ -1,4 +1,5 @@
 public class Solution {
+    // 我的算法
     public String reverseVowels(String s) 
     {
 		char[] vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
