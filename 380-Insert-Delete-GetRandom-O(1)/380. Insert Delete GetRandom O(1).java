@@ -1,5 +1,4 @@
 public class RandomizedSet {
-
     List<Integer> nums;
     Map<Integer, Integer> locs;
     Random rand = new Random();
