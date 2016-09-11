@@ -1,6 +1,6 @@
 public class RandomizedSet {
-    List<Integer> nums;
-    Map<Integer, Integer> locs;
+    List<Integer> nums;          // 链表用来随机返回元素，时间复杂度O(1)
+    Map<Integer, Integer> locs;  // 哈希表用来判断是否存在要加入或删除的元素，时间复杂度O(1)
     Random rand = new Random();
     
     // 构造函数
@@ -29,11 +29,12 @@ public class RandomizedSet {
         if(!locs.containsKey(val)) 
         	return false;
         int loc = locs.get(val);
+        // 不是最后一个
         if(loc < nums.size() - 1) 
         { 
-        	// not the last one then swap the last one with this val
+        	// 和最后一个元素进行交换
             int lastOne = nums.get(nums.size() - 1);
-            nums.set(loc , lastOne);
+            nums.set(loc, lastOne);
             locs.put(lastOne, loc);
         }
         locs.remove(val);
