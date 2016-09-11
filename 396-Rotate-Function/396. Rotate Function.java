@@ -1,4 +1,5 @@
 public class Solution {
+    // 我的算法
     public int maxRotateFunction(int[] A) 
     {
         if(A == null || A.length == 0)
@@ -18,8 +19,7 @@ public class Solution {
         
         while(index != startPos)
         {
-            sum += factor * A[index++];
-            factor++;
+            sum += factor++ * A[index++];
             if(index >= n)
                 index = 0;
         }
