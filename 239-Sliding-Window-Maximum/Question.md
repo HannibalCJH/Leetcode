@@ -43,13 +43,13 @@ Could you solve it in linear time?
 
 <div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
 
-<span class="hidebutton">[Amazon](/company/amazon/) [Google](/company/google/) [Zenefits](/company/zenefits/)</span></div>
+<span class="hidebutton" style="display: none;">[Amazon](/company/amazon/) [Google](/company/google/) [Zenefits](/company/zenefits/)</span></div>
 
 <div>
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton">[Heap](/tag/heap/)</span></div>
+<span class="hidebutton" style="display: none;">[Heap](/tag/heap/)</span></div>
 
 <div>
 
