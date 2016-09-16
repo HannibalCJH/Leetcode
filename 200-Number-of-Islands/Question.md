@@ -35,7 +35,7 @@ Special thanks to [@mithmatt](https://leetcode.com/discuss/user/mithmatt) for ad
 
 <div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
 
-<span class="hidebutton">[Amazon](/company/amazon/) [Facebook](/company/facebook/) [Google](/company/google/) [Microsoft](/company/microsoft/) [Zenefits](/company/zenefits/)</span></div>
+<span class="hidebutton" style="display: none;">[Amazon](/company/amazon/) [Facebook](/company/facebook/) [Google](/company/google/) [Microsoft](/company/microsoft/) [Zenefits](/company/zenefits/)</span></div>
 
 <div>
 
