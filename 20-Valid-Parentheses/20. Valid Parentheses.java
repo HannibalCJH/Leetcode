@@ -1,4 +1,5 @@
 public class Solution {
+    // 我的算法
     public boolean isValid(String s) 
     {
         if(s == null || s.length() < 1)
