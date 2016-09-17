@@ -9,24 +9,19 @@ public class Solution {
         Stack<Character> st = new Stack<Character>();
         for(int i = 0; i < s.length(); i++)
         {
-            char cur = s.charAt(i);
-            if(cur == ')')
+        	char cur = s.charAt(i);
+        	boolean empty = st.isEmpty();
+            switch(cur)
             {
-                if(st.isEmpty() || st.pop() != '(')
-                    return false;
+            	case ')': 
+            		if(empty || st.pop() != '(') return false; break;
+            	case '}':
+            		if(empty || st.pop() != '{') return false; break;
+            	case ']':
+            		if(empty || st.pop() != '[') return false; break;
+            	default: st.push(cur);
+            	
             }
-            else if(cur == '}')
-            {
-                if(st.isEmpty() || st.pop() != '{')
-                    return false;
-            }
-            else if(cur == ']')
-            {
-                if(st.isEmpty() || st.pop() != '[')
-                    return false;
-            }
-            else
-                st.push(cur);
         }
         return st.isEmpty();
     }
