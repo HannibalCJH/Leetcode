@@ -7,7 +7,7 @@ public class Solution {
         int size = 1 << n;
         // 1011 = 1110
         // it is (1011 >> 1) ^ 1011 = 1110
-        for(int i=0;i<size;i++) 
+        for(int i = 0; i < size; i++) 
         	result.add((i >> 1) ^ i);  
         return result;   
     }
