@@ -14,7 +14,7 @@ Merge _k_ sorted linked lists and return it as one sorted list. Analyze and desc
 
 <div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
 
-<span class="hidebutton" style="display: none;">[Airbnb](/company/airbnb/) [Amazon](/company/amazon/) [Facebook](/company/facebook/) [Google](/company/google/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/) [Twitter](/company/twitter/) [Uber](/company/uber/)</span></div>
+<span class="hidebutton">[Airbnb](/company/airbnb/) [Amazon](/company/amazon/) [Facebook](/company/facebook/) [Google](/company/google/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/) [Twitter](/company/twitter/) [Uber](/company/uber/)</span></div>
 
 <div>
 
