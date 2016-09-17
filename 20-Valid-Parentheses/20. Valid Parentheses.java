@@ -12,21 +12,18 @@ public class Solution {
             char cur = s.charAt(i);
             if(cur == ')')
             {
-                if(st.isEmpty() || st.peek() != '(')
+                if(st.isEmpty() || st.pop() != '(')
                     return false;
-                st.pop();
             }
             else if(cur == '}')
             {
-                if(st.isEmpty() || st.peek() != '{')
+                if(st.isEmpty() || st.pop() != '{')
                     return false;
-                st.pop();
             }
             else if(cur == ']')
             {
-                if(st.isEmpty() || st.peek() != '[')
+                if(st.isEmpty() || st.pop() != '[')
                     return false;
-                st.pop();
             }
             else
                 st.push(cur);
