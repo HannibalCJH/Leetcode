@@ -13,9 +13,6 @@ public class Solution {
 	
 	public boolean isValidBST(TreeNode root) 
 	{
-        if(root == null)
-        	return true;
-        
         return dfs(root);
     }
 	
