@@ -15,7 +15,7 @@ public class Solution {
             {
             	// 取左边界为短板
                 smaller = height[left];
-                // 加上所以比短板小的面积
+                // 加上所有比短板小的面积
                 while(left < right && height[left] <= smaller) 
                 {
                     area += smaller - height[left];
