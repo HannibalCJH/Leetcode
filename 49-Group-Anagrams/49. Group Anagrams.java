@@ -7,7 +7,7 @@ public class Solution {
 			return result;
 		
 		HashMap<String, List<String>> map = new HashMap<String, List<String>>();
-		for(int i=0;i<strs.length;i++)
+		for(int i = 0; i < strs.length; i++)
 		{
 			// 每个字符串按字母表顺序排序
 			char[] ary = strs[i].toCharArray();
