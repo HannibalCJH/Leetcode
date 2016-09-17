@@ -3,11 +3,12 @@ public class Solution {
     {
         if(prices.length < 2)
             return 0;
-        int curMin = prices[0], maxPro = 0;
+        int curMin = prices[0]; // 当前最小值
+        int maxPro = 0;         // 当前最大收益
         for(int i = 0; i < prices.length; i++)
         {
-            curMin = Math.min(curMin, prices[i]);
-            maxPro = Math.max(maxPro, prices[i] - curMin);
+            curMin = Math.min(prices[i], curMin);
+            maxPro = Math.max(prices[i] - curMin, maxPro);
         }
         return maxPro;
     }
