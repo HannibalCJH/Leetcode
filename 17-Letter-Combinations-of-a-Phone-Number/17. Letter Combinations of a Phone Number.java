@@ -12,11 +12,12 @@ public class Solution {
         
         for(int i = 0; i < digits.length(); i++)
         {
-            int x = Character.getNumericValue(digits.charAt(i));
+            //int x = Character.getNumericValue(digits.charAt(i));
+            int digit = digits.charAt(i) - '0';
             while(ans.peek().length() == i)
             {
                 String t = ans.remove();
-                for(char s : mapping[x].toCharArray())
+                for(char s : mapping[digit].toCharArray())
                     ans.add(t + s);
             }
         }
